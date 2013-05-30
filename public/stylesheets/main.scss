@@ -1,0 +1,236 @@
+
+*  { margin: 0; padding: 0; }
+ul { list-style: none; }
+h1,h2,h3,h4 { font-weight: normal; }
+body {
+  font: 14px "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+}
+a, a:visited { color: #0085CF; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.hide { display: none; }
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+.loading {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  height: 200px;
+  margin-left: -100px;
+  margin-top: -100px;
+  background: url(http://img04.taobaocdn.com/tps/i4/T14LGzXr8iXXX6DYsb-100-100.gif) no-repeat 50% 50%;
+}
+
+// path {
+//   stroke: steelblue;
+//   stroke-width: 2;
+//   fill: none;
+// }
+
+#wrapper {
+  width: 980px;
+  margin: 0 auto;
+}
+#header {
+  position: relative;
+  zoom: 1;
+  z-index: 2;
+  h1 {
+    font-size: 30px;
+    span {
+      color: red;
+    }
+  }
+  padding: 8px 0;
+  height: 50px;
+}
+#footer {
+  border-top: 1px solid #eee;
+  color: #999;
+  margin-top: 20px;
+  clear: both;
+  padding: 8px 0 16px;
+  ul {
+    float: right;
+  }
+  ul li {
+    float: left;
+    margin-left: 20px;
+  }
+}
+
+.browser {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  background: url(http://img02.taobaocdn.com/tps/i2/T1r0zkXc4lXXXE4m2q-87-16.png) no-repeat -999em 0;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+.chrome {
+  background-position: -2px -1px;
+}
+.safari {
+  background-position: -53px -1px;
+}
+.firefox {
+  background-position: -19px -1px;
+}
+.opera {
+  background-position: -36px -1px;
+}
+.msie {
+  background-position: -70px -1px;
+}
+
+.side {
+  width: 200px;
+  float: left;
+}
+.main {
+  width: 780px;
+  float: right;
+}
+.main-wrap {
+  padding: 0 0 0 15px;
+  h2 {
+    font-size: 20px;
+    padding: 15px 0 20px;
+  }
+}
+.side-box {
+  border: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+  h3 {
+    height: 24px;
+    line-height: 24px;
+    text-indent: 6px;
+    background: #e5e5e5;
+  }
+  .side-box-bd {
+    padding: 8px;
+    background: #f4f4f4;
+    small {
+      color: #999;
+      font-size: 12px;
+    }
+  }
+}
+
+.filter-box {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 8px;
+  &:last-child {
+    border: 0;
+    padding-bottom: 0;
+  }
+  h4 {
+    font-weight: bold;
+    padding: 5px;
+  }
+  .filter-block {
+    p {
+      padding: 3px;
+      margin-left: 16px;
+      margin-right: 5px;
+      border-radius: 2px;
+      &.current,
+      &:hover {
+        background: #dedede;
+      }
+    }
+  }
+}
+
+.error-list {
+  li {
+    border-bottom: 1px solid #eee;
+    position: relative;
+    zoom: 1;
+    padding: 5px 0 12px;
+    overflow: hidden;
+    font-size: 12px;
+
+    h3 {
+      font-weight: normal;
+      font-size: 16px;
+      padding: 3px 110px 3px 0;
+    }
+    .sparkline {
+      position: absolute;
+      right: 0;
+      top: 10px;
+      height: 30px;
+      text-align: right;
+      color: #bbb;
+      span {
+        svg {
+          width: 90px;
+          height: 10px;
+        }
+        path {
+          stroke: #bbb;
+          stroke-width: 1;
+          fill: none;
+        }
+      }
+    }
+    .operation {
+      position: absolute;
+      right: 0;
+      top: 44px;
+      color: #bbb;
+    }
+    p {
+      color: #888;
+      line-height: 1.5;
+      margin-top: 4px;
+    }
+  }
+  li:last-child {
+    border-bottom: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.sort {
+  text-align: right;
+  font-size: 13px;
+  padding: 10px 2px 2px 0;
+  border-bottom: 1px solid #ddd;
+
+  a.current {
+    border: 1px solid #ddd;
+    padding: 2px 5px;
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 -1px 2px #ddd;
+  }
+}
+
+.error {
+  h1 {
+    font-size: 26px;
+    padding: 8px 0 20px;
+    word-break: break-all;
+  }
+  table {
+    border: 0 solid #666;
+    table-layout: fixed;
+    border-collapse: collapsed;
+    width: 98%;
+    tr {
+      td {
+        border-bottom: 1px solid #666;
+        background: #fafafa;
+        padding: 7px 0;
+        vertical-align: top;
+        word-break: break-all;
+      }
+    }
+  }
+  .line-chart {
+    margin-top: 12px;
+  }
+}

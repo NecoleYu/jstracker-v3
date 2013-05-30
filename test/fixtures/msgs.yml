@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  host_id: 1
+  type_id: 1
+  msg: MyString
+  count: 1
+
+two:
+  host_id: 1
+  type_id: 1
+  msg: MyString
+  count: 1

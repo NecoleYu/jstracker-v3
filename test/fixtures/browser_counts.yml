@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  msg_id: 1
+  browser: MyString
+  count: 1
+  date: 2013-04-27
+
+two:
+  msg_id: 1
+  browser: MyString
+  count: 1
+  date: 2013-04-27

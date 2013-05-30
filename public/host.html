@@ -1,0 +1,56 @@
+<h1>{{host.name}}</h1>
+
+<div class="sort" id="J_Sort">
+  Sort by: 
+  <a href="">Create</a> <a href="">Update</a> <a href="" class="current">Total ↓</a>  <!-- ↑ -->
+</div>
+
+<div class="main" hostview><div class="main-wrap">
+  <h2>Showing all {{host.msgs.length}} errors</h2>
+  <ul class="error-list">
+    <li id="J_Msg_{{msg.id}}" ng-repeat="msg in host.msgs">
+      <div class="sparkline">
+        <span>{{msg.daily_counts.join(",")}}</span>
+        <br />
+        {{msg.weekly_total}} occurrences this week
+      </div>
+      <div class="operation">
+        <a href="javascript:;" ng-click="changeType(msg, 1)">open</a> |
+        <a href="javascript:;" ng-click="changeType(msg, 2)">close</a> |
+        <a href="javascript:;" ng-click="changeType(msg, 3)">ignore</a>
+      </div>
+      <h3><a href="/#/msgs/{{msg.id}}">{{msg.msg}}</a> <span title="total">({{msg.count}})</span></h3>
+      <p>
+        created_at: {{msg.created_at}}, updated_at: {{msg.updated_at}}<br />
+        <span class="browser {{browser}}" ng-repeat="browser in msg.browsers"></span>
+      </p>
+    </li>
+  </ul>
+</div></div>
+
+<div class="side">
+  <div class="side-box">
+    <h3>Filter your errors</h3>
+    <div class="side-box-bd">
+      <div class="filter-box">
+        <h4>By Type</h4>
+        <div class="filter-block">
+          <p class="{{t=='1'&&'current'}}"><a href="" ng-click="setType('1')">Open<small> ({{host.types.open}})</small></a></p>
+          <p class="{{t=='2'&&'current'}}"><a href="" ng-click="setType('2')">Closed<small> ({{host.types.closed}})</small></a></p>
+          <p class="{{t=='3'&&'current'}}"><a href="" ng-click="setType('3')">Ignored<small> ({{host.types.ignored}})</small></a></p>
+        </div>
+      </div>
+      <div class="filter-box">
+        <h4>By Browser</h4>
+        <div class="filter-block">
+          <p class="{{b=='all'&&'current'}}"><a href="" ng-click="setBrowser('all')">All</a></p>
+          <p class="{{b=='msie'&&'current'}}"><a href="" ng-click="setBrowser('msie')">Internet Explorer</a></p>
+          <p class="{{b=='firefox'&&'current'}}"><a href="" ng-click="setBrowser('firefox')">Firefox</a></p>
+          <p class="{{b=='chrome'&&'current'}}"><a href="" ng-click="setBrowser('chrome')">Chrome</a></p>
+          <p class="{{b=='safari'&&'current'}}"><a href="" ng-click="setBrowser('safari')">Safari</a></p>
+          <p class="{{b=='opera'&&'current'}}"><a href="" ng-click="setBrowser('opera')">Opera</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

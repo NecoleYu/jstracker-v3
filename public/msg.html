@@ -1,0 +1,35 @@
+
+<div class="error" errortable>
+  <h1>{{msg.msg}}</h1>
+  <table>
+    <tbody>
+      <tr>
+        <td width="30%">Created at</td>
+        <td width="70%"><p>{{msg.created_at}}</p></td>
+      </tr>
+      <tr>
+        <td>Updated at</td>
+        <td><p>{{msg.updated_at}}</p></td>
+      </tr>
+      <tr>
+        <td>Browsers</td>
+        <td>
+          <p>最近 7 天的浏览器分布.</p>
+          <div class="pie-chart">{{msg.browser_counts}}</div>
+        </td>
+      </tr>
+      <tr>
+        <td>Occurrences</td>
+        <td>
+          <p>最近 15 天走势.</p>
+          <div class="line-chart">{{msg.daily_counts}}</div>
+          <br />
+          <br />
+          <p>最近 24 小时走势.</p>
+          <br />
+          <div class="line-chart-hourly">{{msg.hourly_counts}}</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

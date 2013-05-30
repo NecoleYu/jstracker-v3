@@ -1,0 +1,43 @@
+<!doctype html>
+<html ng-app="jstracker">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <link rel="stylesheet" href="./stylesheets/main.css">
+</head>
+<body>
+
+  <div id="wrapper">
+    <div id="header"></div>
+    <div id="content">
+      <div class="loading" loading></div>
+      <div class="view ng-view"></div>
+    </div>
+    <div id="footer">
+      <ul>
+        <li><a href="">Concat</a></li>
+        <li><a href="">Twitter</a></li>
+        <li><a href="">Blog</a></li>
+        <li><a href="">Feedback</a></li>
+      </ul>
+      <p>Created and maintained by 云谦 (yunqian#taobao.com).</p>
+    </div>
+  </div>
+
+  <script src="./components/jquery/jquery.min.js"></script>
+  <script src="./javascripts/jquery.peity.js"></script>
+  <script src="./components/angular/angular.js"></script>
+  <script src="./components/angular-resource/angular-resource.js"></script>
+  <script src="./javascripts/services.js"></script>
+  <script src="./javascripts/directives.js"></script>
+  <script src="./javascripts/main.js"></script>
+
+  <script src="https://www.google.com/jsapi"></script>
+  <script>
+    $.fn.peity.defaults.line.width  = 90;
+    $.fn.peity.defaults.line.height = 10;
+    google.load("visualization", "1", {packages: ["corechart"]});
+  </script>
+
+</body>
+</html>
